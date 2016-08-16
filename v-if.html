@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="http://cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{message}}</h1>
+    <h1 v-if="yes">Yes!</h1>
+    <h1 v-if="no">No!</h1>
+    <h1 v-if="age>=25">Age:{{age}}</h1>
+    <h1 v-if="name.indexOf('jack')>=0">Name:{{name}}</h1>
+  </div>
+  <script>
+  var vm = new Vue({
+    el:'#app',
+    data:{
+      message:'Hello,Vue.js!',
+      yes:true,
+      no:false,
+      age:18,
+      name:'rosekeepfool'
+    }
+  })
+  </script>
+</body>
+</html>
